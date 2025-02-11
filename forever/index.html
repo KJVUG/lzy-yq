@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+    <title>forever</title>
+	<link rel="icon" href="../img/icon.png" type="image/png"/>
+    <meta name="language" content="zh-CN">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            overflow: hidden;
+        }
+
+        .city {
+            width: 100%;
+            position: fixed;
+            bottom:
+                0px;
+            z-index: 100;
+        }
+
+        .city img {
+            width: 100%;
+        }
+
+
+		span{
+			font-size: 15px;
+			color: white;
+		}
+		
+		audio#myAudio {
+			position: fixed;
+			right: 20px;
+			bottom: 20px;
+		}
+		
+		
+    </style>
+    <link href="modal.css" rel="stylesheet" />
+</head>
+
+<body onselectstart="return false">
+    <!--对话部分-->
+    <div class="share_img"><img src="a8b.png" alt=""></div>
+
+    <div class="page_one">
+        <div class="content">
+            <div class="text_wrapper">
+                <img src="a8.png" alt="">
+                <div class="text">
+                    宝宝~你爱我么~？
+                </div>
+            </div>
+        </div>
+        <div class="btn-groups">
+            <div class="heart-btn">
+                <div id="yes" class="btn btn-a"><span>爱你</span></div>
+            </div>
+            <div id="no" class="btn btn-b"><span>不爱你</span></div>
+        </div>
+    </div>
+    <!--烟花部分-->
+    <canvas id='cas' style="background-color:rgba(0,5,24,1)">
+        浏览器不支持canvas
+    </canvas>
+    <div class="city">
+        <img src="city.png" alt="" />
+    </div>
+    <img src="moon.png" alt="" id="moon" style="visibility: hidden;" />
+    <div style="display:none">
+        <div class="shape">
+            杨乔
+        </div>
+        <div class="shape">
+            爱你
+        </div>
+		<div class="shape">
+		    永远
+		</div>
+		<div class="shape">
+		    爱你
+		</div>
+		<div class="shape">
+		    杨乔
+		</div>
+
+    </div>
+    <!--音乐部分-->
+	<audio id="myAudio" controls>
+		<source src="../music/forever_1.mp3" type="audio/mpeg">
+	</audio>
+
+	<script>
+		window.addEventListener('load', function () {
+			const audio = document.getElementById('myAudio');
+			// 延迟2000毫秒（2秒）后播放音频
+			setTimeout(() => {
+				audio.play();
+			}, 1000);
+		});
+	</script>
+    <iframe id="iframMusic" allow="autoplay" style="display:none" src="blank.mp3"></iframe>
+    <script src="jquery.min.js"></script>
+    <script src="fire.js"></script>
+    <script src="talk.js"></script>
+</body>
+
+</html>

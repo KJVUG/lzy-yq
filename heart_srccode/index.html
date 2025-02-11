@@ -4,6 +4,14 @@
   <meta charset="UTF-8">
   <title>love 乔乔</title>
   <link rel="stylesheet" href="./normalize.min.css">
+  
+  <style>
+	  audio#myAudio {
+	      position: fixed;
+	      right: 30px;
+	      bottom: 5px;
+	  }
+  </style>
 
 </head>
 <body>
@@ -12,6 +20,20 @@
 <!-- partial -->
   <script src='./jquery.min.js'></script>
   <script src="./script.js"></script>
+  
+  <audio id="myAudio" controls>
+      <source src="../music/偏爱.mp3" type="audio/mpeg">
+  </audio>
+      
+  <script>
+      window.addEventListener('load', function () {
+          const audio = document.getElementById('myAudio');
+          // 延迟2000毫秒（2秒）后播放音频
+          setTimeout(() => {
+              audio.play();
+          }, 1000);
+      });
+  </script>
 
 </body>
 </html>

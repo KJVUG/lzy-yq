@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>give 乔乔</title>
+    <link rel="icon" href="img/icon.png" type="image/png"/>
+    <meta name="language" content="zh-CN">
+    <link type="text/css" rel="stylesheet" href="./Love_files/default.css">
+	<link rel="stylesheet" href="css/program.css">
+    <script type="text/javascript" src="./Love_files/jquery.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-parser.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-jit.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-builderbase.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async.min.js"></script>
+    <script type="text/javascript" src="./Love_files/jscex-async-powerpack.min.js"></script>
+    <script type="text/javascript" src="./Love_files/functions.js" charset="utf-8"></script>
+    <script type="text/javascript" src="./Love_files/love.js" charset="utf-8"></script>
+	
+	
+
+	<style>
+		audio#myAudio {
+		    position: fixed;
+		    right: 20px;
+		    bottom: 20px;
+		}
+		.blue-button {
+			display: inline-block;
+			background-color: lightblue;
+			color: white;
+			font-weight: bold;
+			padding: 10px 20px;
+			text-decoration: none;
+			border-radius: 5px;
+			margin-top: 15px;
+			margin-left: 15px;
+		}
+		#imageContainer {
+		    display: flex;
+		    flex-wrap: wrap;
+		    width: 800px; /* 假设图片宽度 150px，加上间距后两列合适的总宽度 */
+		    gap: 10px; /* 图片之间的间距 */
+			margin-left: 30px;
+			margin-top: 15px;
+		}
+		
+		#imageContainer img {
+		    width: 300px; /* 固定图片宽度 */
+		    height: 300px; /* 固定图片高度 */
+		    object-fit: cover; /* 保持图片比例并覆盖容器 */
+			border-radius: 15px;
+		}
+
+		.f{
+			width: 60px;
+			margin-left: 300px;
+			
+		}
+	</style>
+</head>
+
+<body>
+    <div id="main">
+		<div>
+			<a href="index.html" class="blue-button">返回</a>
+
+		</div>
+		<a href="forever/index.html">
+			<img  class="f"src="img/f.png"/>
+		</a>
+
+        <div id="error">亲，您使用的浏览器无法支持即将显示的内容，请换成谷歌(<a
+                href="http://www.google.cn/chrome/intl/zh-CN/landing_chrome.html?hl=zh-CN&brand=CHMI">Chrome</a>)或者火狐(<a
+                href="http://firefox.com.cn/download/">Firefox</a>)浏览器哟~</div>
+        <div id="wrap">
+            <div id="text">
+                <div id="code">
+                    <span class="say">一定要爱你</span><br><br>
+                    <span class="say">直到遇见你 我相信了命运</span><br>
+                    <span class="say">真的希望能和你一辈子</span><br>
+                    <span class="say">如果你能给我机会让我好好的爱你</span><br>
+                    <span class="say">只想真心真意对你说</span><br>
+                    <br>
+                    <span class="say">我穿越风和雨,只为交出我的心💗</span><br>
+<!--                    <span class="say">爱到牛郎织女为我们点头</span><br>
+                    <span class="say">爱到花儿绽放鸟儿成群 把我们环绕</span><br>
+                    <span class="say">爱到每道彩虹映出你的美</span><br> -->
+                    <br>
+                    <span class="say">我爱你一定爱到海枯石烂 永远不后悔</span><br>
+                    <span class="say">爱到来生来世也会说无悔</span><br>
+                    <span class="say">就把这首动听的歌唱给心爱的女孩</span><br>
+                    <span class="say">这未来值得去努力</span><br>
+                    <span class="say">为你</span><br>
+                    <br>
+                    <span class="say"><span class="space"></span> -- 你的，勇勇~</span>
+                </div>
+            </div>
+				<div id="clock-box">
+					<a href="#" target="_blank">勇勇</a> 和 <a href="#"
+						target="_blank">乔乔</a> 在一起的
+					<div id="clock"></div>
+				</div>
+            <canvas id="canvas" width="100%" height="680"></canvas>
+        </div>
+
+    </div>
+	<div class="cube">
+		<!-- 外层立方体 -->
+		<div class="outer-cube">
+			<div class="outer-top">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="outer-bottom">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="outer-front">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="outer-back">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="outer-left">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="outer-right">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+		</div>
+		<!-- 内层立方体 -->
+		<div class="inner-cube">
+			<div class="inner-top">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="inner-bottom">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="inner-front">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="inner-back">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="inner-left">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+			<div class="inner-right">
+				<img src="img/c228050787a773f2e34dc608bcba873.jpg" />
+			</div>
+		</div>
+	</div>
+	
+	<!-- 图片容器 -->
+	    <div id="imageContainer">
+	        <!-- 示例图片，可替换为实际图片路径 -->
+	        <img src="./img/c228050787a773f2e34dc608bcba873.jpg" >
+			<img src="./img/c228050787a773f2e34dc608bcba873.jpg" >
+			<img src="./img/c228050787a773f2e34dc608bcba873.jpg" >
+			<img src="./img/c228050787a773f2e34dc608bcba873.jpg" >
+	    </div>
+
+
+		
+        <audio id="myAudio" controls>
+            <source src="./music/为了遇见你 - 薛之谦.mp3" type="audio/mpeg">
+        </audio>
+    
+        <script>
+            window.addEventListener('load', function () {
+                const audio = document.getElementById('myAudio');
+                // 延迟2000毫秒（2秒）后播放音频
+                setTimeout(() => {
+                    audio.play();
+                }, 1000);
+            });
+        </script>
+
+    <script>
+        (function () {
+            var canvas = $('#canvas');
+
+            if (!canvas[0].getContext) {
+                $("#error").show();
+                return false;
+            }
+
+            var width = canvas.width();
+            var height = canvas.height();
+
+            canvas.attr("width", width);
+            canvas.attr("height", height);
+
+            var opts = {
+                seed: {
+                    x: width / 2 - 20,
+                    color: "rgb(190, 26, 37)",
+                    scale: 2
+                },
+                branch: [
+                    [535, 680, 570, 250, 500, 200, 30, 100, [
+                        [540, 500, 455, 417, 340, 400, 13, 100, [
+                            [450, 435, 434, 430, 394, 395, 2, 40]
+                        ]],
+                        [550, 445, 600, 356, 680, 345, 12, 100, [
+                            [578, 400, 648, 409, 661, 426, 3, 80]
+                        ]],
+                        [539, 281, 537, 248, 534, 217, 3, 40],
+                        [546, 397, 413, 247, 328, 244, 9, 80, [
+                            [427, 286, 383, 253, 371, 205, 2, 40],
+                            [498, 345, 435, 315, 395, 330, 4, 60]
+                        ]],
+                        [546, 357, 608, 252, 678, 221, 6, 100, [
+                            [590, 293, 646, 277, 648, 271, 2, 80]
+                        ]]
+                    ]]
+                ],
+                bloom: {
+                    num: 700,
+                    width: 1080,
+                    height: 650,
+                },
+                footer: {
+                    width: 1200,
+                    height: 5,
+                    speed: 10,
+                }
+            }
+
+            var tree = new Tree(canvas[0], width, height, opts);
+            var seed = tree.seed;
+            var foot = tree.footer;
+            var hold = 1;
+
+            canvas.click(function (e) {
+                var offset = canvas.offset(), x, y;
+                x = e.pageX - offset.left;
+                y = e.pageY - offset.top;
+                if (seed.hover(x, y)) {
+                    hold = 0;
+                    canvas.unbind("click");
+                    canvas.unbind("mousemove");
+                    canvas.removeClass('hand');
+                }
+            }).mousemove(function (e) {
+                var offset = canvas.offset(), x, y;
+                x = e.pageX - offset.left;
+                y = e.pageY - offset.top;
+                canvas.toggleClass('hand', seed.hover(x, y));
+            });
+
+            var seedAnimate = eval(Jscex.compile("async", function () {
+                seed.draw();
+                while (hold) {
+                    $await(Jscex.Async.sleep(10));
+                }
+                while (seed.canScale()) {
+                    seed.scale(0.95);
+                    $await(Jscex.Async.sleep(10));
+                }
+                while (seed.canMove()) {
+                    seed.move(0, 2);
+                    foot.draw();
+                    $await(Jscex.Async.sleep(10));
+                }
+            }));
+
+            var growAnimate = eval(Jscex.compile("async", function () {
+                do {
+                    tree.grow();
+                    $await(Jscex.Async.sleep(10));
+                } while (tree.canGrow());
+            }));
+
+            var flowAnimate = eval(Jscex.compile("async", function () {
+                do {
+                    tree.flower(2);
+                    $await(Jscex.Async.sleep(10));
+                } while (tree.canFlower());
+            }));
+
+            var moveAnimate = eval(Jscex.compile("async", function () {
+                tree.snapshot("p1", 240, 0, 610, 680);
+                while (tree.move("p1", 500, 0)) {
+                    foot.draw();
+                    $await(Jscex.Async.sleep(10));
+                }
+                foot.draw();
+                tree.snapshot("p2", 500, 0, 610, 680);
+
+                // 会有闪烁不得意这样做, (＞﹏＜)
+                canvas.parent().css("background", "url(" + tree.toDataURL('image/png') + ")");
+                /* canvas.css("background", "#ffc0cb"); */
+                $await(Jscex.Async.sleep(300));
+                canvas.css("background", "none");
+            }));
+
+            var jumpAnimate = eval(Jscex.compile("async", function () {
+                var ctx = tree.ctx;
+                while (true) {
+                    tree.ctx.clearRect(0, 0, width, height);
+                    tree.jump();
+                    foot.draw();
+                    $await(Jscex.Async.sleep(25));
+                }
+            }));
+
+        var textAnimate = eval(Jscex.compile("async", function () {
+            var together = new Date();
+            // 设置年份为 2024
+            together.setFullYear(2024);
+            // 设置月份为 10（注意：月份从 0 开始计数，所以 10 代表 11 月，这里应改为 9 代表 10 月）
+            together.setMonth(9);
+            // 设置日期为 8
+            together.setDate(8);
+            // 设置小时为 1
+            together.setHours(1);
+            // 设置分钟为 23
+            together.setMinutes(23);
+            // 设置秒为 0
+            together.setSeconds(0);
+            // 设置毫秒为 0
+            together.setMilliseconds(0);
+            $("#code").show().typewriter();
+            $("#clock-box").fadeIn(500);
+            while (true) {
+                timeElapse(together);
+                $await(Jscex.Async.sleep(1000));
+            }
+        }));
+
+            var runAsync = eval(Jscex.compile("async", function () {
+                $await(seedAnimate());
+                $await(growAnimate());
+                $await(flowAnimate());
+                $await(moveAnimate());
+
+                textAnimate().start();
+
+                $await(jumpAnimate());
+            }));
+
+            runAsync().start();
+        })();
+    </script>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh; /* 设置最小高度为视口高度，保证渐变背景完整显示 */
+    background: linear-gradient(to bottom, rgb(145, 167, 208) 0%, rgb(246, 202, 201) 100%); /* 修改渐变范围为100% */
+    font-size: 20px;
+    font-family: '微软雅黑', '宋体', sans-serif;
+    color: white;
+	overflow-x: hidden; /* 隐藏水平滚动条 */
+	overflow-y: auto; /* 垂直滚动条按需显示 */
+}
+
+a {
+	color: #000;
+	font-size: 14px;
+}
+
+#main {
+	width: 100%;
+}
+
+#wrap {
+	position: relative;
+	margin: 0 auto;
+	width: 1200px;
+	height: 680px;
+	margin-top: 10px;
+}
+
+#text {
+	width: 400px;
+	height: 425px;
+	left: 100px;
+	top: 80px;
+	position: absolute;
+}
+
+#code {
+	display: none;
+	font-size: 20px;
+	margin-bottom: 20px;
+}
+
+#clock-box {
+	position: absolute;
+	left: 60px;
+	top: 550px;
+	font-size: 28px;
+	display: none;
+}
+
+#clock-box a {
+	font-size: 28px;
+	text-decoration: none;
+}
+
+#clock {
+	margin-left: 48px;
+}
+
+#clock .digit {
+	font-size: 64px;
+}
+
+#canvas {
+	margin: 0 auto;
+	width: 100%;
+	height: 680px;
+
+}
+
+#error {
+	margin: 0 auto;
+	text-align: center;
+	margin-top: 60px;
+	display: none;
+}
+
+.hand {
+	cursor: pointer;
+}
+
+.say {
+	margin-left: 5px;
+	margin-top: 10px;
+}
+
+.space {
+	margin-right: 150px;
+}
