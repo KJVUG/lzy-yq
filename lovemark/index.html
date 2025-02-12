@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+<meta charset="UTF-8">
+<title>恋爱相册</title>
+
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:800&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="css/style.css">
+    <link rel="icon" href="img/icon.png" type="image/png"/>
+
+	<style>
+		audio#myAudio {
+		    position: fixed;
+		    right: 30px;
+		    bottom: 5px;
+			display: none; /* 隐藏 audio 元素 */
+		}
+	</style>
+</head>
+<body>
+
+<div class="gallery">
+  <div class="gallery__strip__wrapper">
+    <div class="gallery__strip one">
+      <div class="photo">
+        <div class="photo__image"><img src="img/1.jpg"/></div>
+        <div class="photo__name">相伴</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/2.jpg"/></div>
+        <div class="photo__name">相拥</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/3.jpg"/></div>
+        <div class="photo__name">love</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/4.jpg"/></div>
+        <div class="photo__name">娱乐</div>
+      </div>
+    </div>
+  </div>
+  <div class="gallery__strip__wrapper">
+    <div class="gallery__strip two">
+      <div class="photo">
+        <div class="photo__image"><img src="img/5.jpg"/></div>
+        <div class="photo__name">依靠</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/6.jpg"/></div>
+        <div class="photo__name">枫叶</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/320f1009b5e863ee9726325a26101d9.jpg"/></div>
+        <div class="photo__name">学习</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/392a52832ff1b52774b9801e8a09dc7.jpg"/></div>
+        <div class="photo__name">小熊</div>
+      </div>
+    </div>
+  </div>
+  <div class="gallery__strip__wrapper">
+    <div class="gallery__strip three">
+      <div class="photo">
+        <div class="photo__image"><img src="img/love.jpg"/></div>
+        <div class="photo__name">太阳</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/46529868129e8c0599c423cef768bab.jpg"/></div>
+        <div class="photo__name">影子</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/a85a192fe16781e6bf2535f4a28f964.jpg"/></div>
+        <div class="photo__name">相恋</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/b56c328952a8fdaf8118dfb898cc6e1.jpg"/></div>
+        <div class="photo__name">旅行</div>
+      </div>
+    </div>
+  </div>
+  <div class="gallery__strip__wrapper">
+    <div class="gallery__strip four">
+      <div class="photo">
+        <div class="photo__image"><img src="img/c195a2d4402faf95aab85eff3a74327.jpg"/></div>
+        <div class="photo__name">夜晚</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/d26598a415c61c0d5750c943372fc9d.jpg"/></div>
+        <div class="photo__name">相爱</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/c228050787a773f2e34dc608bcba873.jpg"/></div>
+        <div class="photo__name">女孩</div>
+      </div>
+      <div class="photo">
+        <div class="photo__image"><img src="img/boy.jpg"/></div>
+        <div class="photo__name">男孩</div>
+      </div>
+    </div>
+  </div>
+</div>
+	  <audio id="myAudio" controls>
+		  <source src="./css/Sleeptalking - imfinenow ÊMIA.mp3" type="audio/mpeg">
+	  </audio>
+		  
+	  <script>
+		  window.addEventListener('load', function () {
+			  const audio = document.getElementById('myAudio');
+			  // 延迟2000毫秒（2秒）后播放音频
+				  audio.play();
+		  });
+	  </script>
+
+</body>
+</html>

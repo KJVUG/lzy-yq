@@ -97,6 +97,7 @@
 			    position: fixed;
 			    right: 20px;
 			    bottom: 20px;
+				 /*display: none; 隐藏 audio 元素 */
 			}
 			.text-container {
 			    width: 700px;
@@ -123,7 +124,7 @@
     <body>
     <!--头像-->
     <div class="cs">
-        <a href="heart_srccode/index.html" >
+        <a href="heart_srccode/index.html" target="_blank" >
             <img src="img/love.jpg" id="logo" >
         </a>
     </div>
@@ -778,17 +779,9 @@
     </script>
 
 
-    <script>
-        window.addEventListener('load', function () {
-            const audio = document.getElementById('myAudio');
-            // 延迟2000毫秒（2秒）后播放音频
-            setTimeout(() => {
-                audio.play();
-            }, 2000);
-        });
-    </script>
+
 		<div id="lunbo">
-			<a href="index (2).html">
+			<a href="memory.html">
 			<img src="img/d26598a415c61c0d5750c943372fc9d.jpg" alt="" class="active"/>
 			<img src="img/320f1009b5e863ee9726325a26101d9.jpg" alt="" />
 			<img src="img/c195a2d4402faf95aab85eff3a74327.jpg" alt="" />
@@ -803,6 +796,13 @@
 			<audio id="myAudio" controls>
 			    <source src="./music/梦4.mp3" type="audio/mpeg">
 			</audio>
+			<script>
+			    window.addEventListener('load', function () {
+			        const audio = document.getElementById('myAudio');
+			        // 延迟2000毫秒（2秒）后播放音频
+			            audio.play();
+			    });
+			</script>
 		</div>
 	
 

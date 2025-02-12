@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <title>love 乔乔</title>
+  <link rel="icon" href="../img/icon.png" type="image/png"/>
   <link rel="stylesheet" href="./normalize.min.css">
   
   <style>
@@ -10,6 +11,7 @@
 	      position: fixed;
 	      right: 30px;
 	      bottom: 5px;
+		  display: none; /* 隐藏 audio 元素 */
 	  }
   </style>
 
@@ -29,9 +31,7 @@
       window.addEventListener('load', function () {
           const audio = document.getElementById('myAudio');
           // 延迟2000毫秒（2秒）后播放音频
-          setTimeout(() => {
               audio.play();
-          }, 1000);
       });
   </script>
 

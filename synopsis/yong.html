@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=100%, initial-scale=1">
+  <title>勇勇</title>
+  <link rel="icon" href="../img/icon.png" type="image/png"/>
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/jquery.min.js" defer=""></script>
+  <script src="js/index.js" defer=""></script>
+</head>
+
+<body>
+  <div id="content">
+    <div id="ti">
+      爱你朝朝暮暮间！
+    </div>
+    <div class="custom">
+      <div class="box">
+        <font><span id="runtime_span"></span>
+          <script type="text/javascript">function show_runtime() {
+              window.setTimeout("show_runtime()", 1000); X = new
+                Date("@10/08/2024 1:23:00");
+              Y = new Date(); T = (Y.getTime() - X.getTime()); M = 24 * 60 * 60 * 1000;
+              a = T / M; A = Math.floor(a); b = (a - A) * 24; B = Math.floor(b); c = (b - B) * 60; C = Math.floor((b - B) * 60); D = Math.floor((c - C) * 60);
+              runtime_span.innerHTML = "我爱乔乔已经: " + A + "天" + B + "小时" + C + "分" + D + "秒"
+            } show_runtime();</script>
+          <span id="span_dt"></span>
+        </font>
+      </div>
+    </div>
+    <div class="box-box">
+		<div class="box-top">
+			<font class="qq" onclick="showImage('qq_image')"><i></i></font>
+			<font class="github" onclick="showImage('github_image')"><i></i></font>
+			<font class="vx" onclick="showImage('vx_image')"><i></i></font>
+			<!-- 悬浮图片容器 -->
+			<div id="floating-image-container" class="floating-image-container">
+				<img id="qq_image" src="img/qq-image.jpg" alt="QQ Image" class="floating-image">
+				<img id="github_image" src="img/github_image.jpg" alt="GitHub Image" class="floating-image">
+				<img id="vx_image" src="img/vx_image.jpg" alt="VX Image" class="floating-image">
+			</div>
+		</div>
+      <div class="box">
+        ❤️ Love you three thousand times ❤️</div>
+    </div>
+    <div class="main">
+      <div class="main-1">
+        <div class="box">
+          <img class="img" src="img/boy.jpg">
+          <div class="boxbox">
+            <center>
+              <font class="admin"><i></i>勇勇</font>
+            </center>
+          </div>
+        </div>
+      </div>
+      <div class="main-2">
+        <div class="box ju">
+          <h4>
+            <font class="zuobiao"><i></i>中国 · 河源</font>
+            <div>CHINA HEYUAN</div>
+          </h4>
+        </div>
+        <div class="box">
+          <font class="newweb"><i></i>愿出一家之言，以结两姓之好!<i></i>
+          </font>
+        </div>
+        <div class="box ">你好，能不能借一生说话🎉
+        </div>
+      </div>
+    </div>
+    <div class="foot">
+      <font><a href="./wa/index.html" target="_blank"><i></i>秘密</a></font>
+      <font><a href="../lovemark/index.html" target="_blank"><i></i>相册</a></font>
+      <font><a href="index.html" target="_blank"><i></i>纪录</a></font>
+    </div>
+
+	<script>
+		function showImage(imageId) {
+		    // 获取所有图片和容器
+		    const images = document.querySelectorAll('.floating-image');
+		    const container = document.getElementById('floating-image-container');
+		
+		    // 隐藏所有图片
+		    images.forEach(image => image.classList.remove('active'));
+		
+		    // 显示点击的图片
+		    const clickedImage = document.getElementById(imageId);
+		    clickedImage.classList.add('active');
+		
+		    // 显示容器
+		    container.style.display = 'block';
+		
+		    // 添加鼠标移出事件到容器，以隐藏图片
+		    container.addEventListener('mouseleave', hideImage);
+		
+		    // 为了确保点击图片本身不会触发mouseleave事件，可以添加一个点击事件监听器来阻止传播
+		    clickedImage.addEventListener('mouseenter', function(event) {
+		        event.stopPropagation();
+		    });
+		}
+		
+		function hideImage() {
+		    // 获取所有图片和容器
+		    const images = document.querySelectorAll('.floating-image');
+		    const container = document.getElementById('floating-image-container');
+		
+		    // 隐藏所有图片
+		    images.forEach(image => image.classList.remove('active'));
+		
+		    // 隐藏容器
+		    container.style.display = 'none';
+		
+		    // 移除mouseleave事件监听器，防止多次绑定
+		    container.removeEventListener('mouseleave', hideImage);
+		}
+	</script>
+
+</body>
+
+</html>
