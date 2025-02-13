@@ -13,7 +13,7 @@ body {
   flex-wrap: wrap;
   width: 100%;
   overflow: hidden;
-  max-width: 1300px;
+  max-width: 1400px;
   margin: auto;
 }
 .gallery__strip {
@@ -68,6 +68,7 @@ body {
   width: 90%;
   transform: translateX(30%);
   transition: 1s cubic-bezier(0.19, 1, 0.22, 1) 0.2s;
+  margin-right: 10px;
 }
 .photo__name {
   text-transform: uppercase;
